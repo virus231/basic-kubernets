@@ -15,3 +15,12 @@
     1. kubectl expose deployment kube-app --type=LoadBalancer --port=8080
     2. kubectl get services
     3. minikube service kube-app
+
+## **Updating Deployments**
+    1. Smth changes
+    2. docker build -t virus2310/kube-app:2 .
+    3. docker push virus2310/kube-app:2
+    4. kubectl set image deployment/kube-app kube-app=virus2310/kube-app:2
+    5. kubectl rollout status deployment/kube-app
+
+
